@@ -14,17 +14,14 @@
         android:theme="@style/Theme.Infoshare"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.SignOutActivity"
             android:exported="false" />
         <activity
-            android:name=".SignOutActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
-
+            android:name=".activities.SignInActivity"
+            android:exported="false" />
         <activity
-            android:name=".SignInActivity"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".Splash_screen"
             android:exported="true">
