@@ -29,6 +29,7 @@
             android:textStyle="bold" />
 
         <FrameLayout
+            android:id="@+id/layoutImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20sdp">
@@ -42,6 +43,7 @@
                 app:riv_oval="true"/>
 
             <TextView
+                android:id="@+id/textAddImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -107,15 +109,31 @@
             android:textSize="@dimen/_13ssp"
             android:layout_marginTop="@dimen/_20sdp"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_sign_up"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
-            android:layout_marginTop="@dimen/_16ssp"
-            app:cornerRadius="@dimen/_8sdp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:text="@string/sign_up"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:animateLayoutChanges="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_sign_up"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                app:cornerRadius="@dimen/_8sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="@string/sign_up"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:visibility="invisible"/>
+
+        </FrameLayout>
+
+
 
         <TextView
             android:id="@+id/account_login"

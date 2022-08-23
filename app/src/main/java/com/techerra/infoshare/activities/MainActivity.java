@@ -1,8 +1,10 @@
-package com.techerra.infoshare;
+package com.techerra.infoshare.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.techerra.infoshare.R;
 
 public class MainActivity extends AppCompatActivity {
 

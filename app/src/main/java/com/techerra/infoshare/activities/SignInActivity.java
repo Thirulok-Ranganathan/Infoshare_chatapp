@@ -1,11 +1,10 @@
 package com.techerra.infoshare.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.techerra.infoshare.R;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.techerra.infoshare.databinding.ActivitySignInBinding;
 
 public class SignInActivity extends AppCompatActivity {
@@ -23,6 +22,7 @@ public class SignInActivity extends AppCompatActivity {
     private void setListeners() {
         binding.accountCreate.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(),SignOutActivity.class)));
+
     }
 
 }

@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_90sdp"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
         android:layout_centerInParent="true"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/fromtxt"
