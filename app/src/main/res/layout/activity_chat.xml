@@ -56,7 +56,6 @@
         android:id="@+id/textName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginstart="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_8sdp"
         android:ellipsize="end"
         android:gravity="center"
@@ -81,15 +80,14 @@
         android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@id/viewBackground"
-        app:layout_constraintTop_toBottomOf="id/viewSupporter"/>
+        app:layout_constraintTop_toBottomOf="@id/viewSupporter"/>
     
     <View
         android:id="@+id/viewSupporter"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="@dimen/_12sdp"
-        app:layout_marginTop_toBottomOf="@id/imageBack"
-        />
+        app:layout_constraintTop_toBottomOf="@id/imageBack"/>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -113,7 +111,6 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginstart="@dimen/_4sdp"
         android:layout_marginLeft="@dimen/_4sdp"
         android:padding="@dimen/_8sdp"
         android:src="@drawable/ic_send"
