@@ -3,8 +3,9 @@
     android:shape="rectangle">
     <solid android:color="@color/input_bg"/>
     <corners
-        android:bottomLeftRadius="@dimen/_24sdp"
-        android:topleftRadius="@dimen/_24sdp"
-        android:topRightRadius="@dimen/_24sdp"/>
 
+        android:bottomLeftRadius="@dimen/_24sdp"
+        android:topRightRadius="@dimen/_24sdp">
+        android:topleftRadius="@dimen/_24sdp"
+    </corners>
 </shape>

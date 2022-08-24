@@ -2,21 +2,21 @@ package com.techerra.infoshare.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
+import com.google.firebase.firestore.auth.User;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.auth.User;
 import com.techerra.infoshare.adapters.UserAdapter;
 import com.techerra.infoshare.databinding.ActivityUserBinding;
+import com.techerra.infoshare.listeners.UserListener;
 import com.techerra.infoshare.utilities.Constants;
 import com.techerra.infoshare.utilities.PreferenceManager;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserActivity extends AppCompatActivity {
+public class UserActivity extends AppCompatActivity implements UserListener {
 
     private ActivityUserBinding binding;
     private PreferenceManager preferenceManager;
@@ -56,8 +56,8 @@ public class UserActivity extends AppCompatActivity {
                             user.token = queryDocumentSnapshot.getString(Constants.KEY_FCM_TOKEN);
                             user.add(user);
                         }
-                        if(users.size() > 0) {
-                            UserAdapter userAdapter = new UserAdapter(users);
+                        if(users.size() >0) {
+                            UserAdapter userAdapter = new UserAdapter(users,this);
                             binding.usersRecyclerView.setAdapter(userAdapter);
                             binding.usersRecyclerView.setVisibility(View.VISIBLE);
                         }else {
@@ -80,5 +80,13 @@ public class UserActivity extends AppCompatActivity {
         }else {
             binding.progressBar.setVisibility(View.INVISIBLE);
         }
+    }
+
+    @Override
+    public void onUserClicked(com.techerra.infoshare.models.User user) {
+        Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+        intent.putExtra(Constants.KEY_USER,user);
+        startActivity(intent);
+        finish();
     }
 }

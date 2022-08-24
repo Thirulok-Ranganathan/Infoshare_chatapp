@@ -16,8 +16,7 @@
         android:theme="@style/Theme.Infoshare"
         tools:targetApi="31">
         <activity
-            android:name=".activities.ChatActivity"
-            android:exported="false" />
+            android:name=".activities.ChatActivity"/>
         <activity
             android:name=".activities.UserActivity"
             android:exported="false" />
