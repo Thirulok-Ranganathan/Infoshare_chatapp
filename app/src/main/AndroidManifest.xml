@@ -19,7 +19,9 @@
             android:name=".activities.ChatActivity"/>
         <activity
             android:name=".activities.UserActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            />
         <activity
             android:name=".activities.SignOutActivity"
             android:exported="false" />
