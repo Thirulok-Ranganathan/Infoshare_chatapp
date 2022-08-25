@@ -5,18 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import com.google.firebase.firestore.auth.User;
+
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.techerra.infoshare.adapters.UserAdapter;
+import com.techerra.infoshare.adapters.UsersAdapter;
 import com.techerra.infoshare.databinding.ActivityUserBinding;
 import com.techerra.infoshare.listeners.UserListener;
+import com.techerra.infoshare.models.User;
 import com.techerra.infoshare.utilities.Constants;
 import com.techerra.infoshare.utilities.PreferenceManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserActivity extends AppCompatActivity implements UserListener {
+public class UsersActivity extends AppCompatActivity implements UserListener {
 
     private ActivityUserBinding binding;
     private PreferenceManager preferenceManager;
@@ -55,10 +56,10 @@ public class UserActivity extends AppCompatActivity implements UserListener {
                             user.image = queryDocumentSnapshot.getString(Constants.KEY_IMAGE);
                             user.token = queryDocumentSnapshot.getString(Constants.KEY_FCM_TOKEN);
                             user.id = queryDocumentSnapshot.getId();
-                            user.add(user);
+                            users.add(user);
                         }
-                        if(users.size() >0) {
-                            UserAdapter userAdapter = new UserAdapter(users,this);
+                        if(users.size() > 0) {
+                            UsersAdapter userAdapter = new UsersAdapter(users,this);
                             binding.usersRecyclerView.setAdapter(userAdapter);
                             binding.usersRecyclerView.setVisibility(View.VISIBLE);
                         }else {

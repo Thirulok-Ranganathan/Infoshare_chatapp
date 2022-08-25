@@ -5,30 +5,25 @@ import android.graphics.BitmapFactory;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.techerra.infoshare.activities.UserActivity;
 import com.techerra.infoshare.databinding.ItemContainerUserBinding;
 import com.techerra.infoshare.listeners.UserListener;
 import com.techerra.infoshare.models.User;
 
 import java.util.List;
 
-public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
+public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHolder> {
 
-    private List<User> users;
-    private UserListener userListener;
+    private final List<User> users;
+    private final UserListener userListener;
 
-    public UserAdapter(List<User> users, UserListener userListener) {
+    public UsersAdapter(List<User> users, UserListener userListener) {
         this.users = users;
         this.userListener = userListener;
     }
 
-    public UserAdapter(List<com.google.firebase.firestore.auth.User> users, UserActivity userListener) {
-
-    }
 
 
     @NonNull
@@ -43,7 +38,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserAdapter.UserViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull UsersAdapter.UserViewHolder holder, int position) {
         holder.setUserData(users.get(position));
     }
 
