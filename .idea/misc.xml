@@ -27,6 +27,11 @@
         <entry key="..\:/Project/Android studio/Infoshare/app/src/main/res/layout/item_container_sent_message.xml" value="0.2" />
         <entry key="..\:/Project/Android studio/Infoshare/app/src/main/res/layout/item_container_user.xml" value="0.1" />
         <entry key="..\:/Project/Android studio/Infoshare/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Project/Android studio/Infoshare_chatapp/app/src/main/res/drawable/background_sent_message.xml" value="0.156" />
+        <entry key="..\:/Project/Android studio/Infoshare_chatapp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/Android studio/Infoshare_chatapp/app/src/main/res/layout/item_container_received_message.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/Android studio/Infoshare_chatapp/app/src/main/res/layout/item_container_recent_conversion.xml" value="0.25416666666666665" />
+        <entry key="..\:/Project/Android studio/Infoshare_chatapp/app/src/main/res/layout/item_container_sent_message.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Senthil Kumar/AndroidStudioProjects/Infoshare_chatapp/app/src/main/res/layout/activity_chat.xml" value="0.1" />
         <entry key="..\:/Users/Senthil Kumar/AndroidStudioProjects/Infoshare_chatapp/app/src/main/res/layout/item_container_recent_conversation.xml" value="0.1" />
       </map>
