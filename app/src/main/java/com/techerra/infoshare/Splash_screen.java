@@ -13,7 +13,7 @@ import com.techerra.infoshare.activities.SignInActivity;
 public class Splash_screen extends AppCompatActivity {
 
 
-    private static int splash_timer=4000;
+    private static int splash_timer=2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
