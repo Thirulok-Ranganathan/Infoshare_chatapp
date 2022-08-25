@@ -19,7 +19,9 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.techerra.infoshare.adapters.RecentConversationsAdapter;
 import com.techerra.infoshare.databinding.ActivityMainBinding;
+import com.techerra.infoshare.listeners.ConversionListener;
 import com.techerra.infoshare.models.ChatMessage;
+import com.techerra.infoshare.models.User;
 import com.techerra.infoshare.utilities.Constants;
 import com.techerra.infoshare.utilities.PreferenceManager;
 
@@ -28,7 +30,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ConversionListener {
 
     private ActivityMainBinding binding;
     private PreferenceManager preferenceManager;
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
         conversations = new ArrayList<>();
-        conversationsAdapter = new RecentConversationsAdapter(conversations);
+        conversationsAdapter = new RecentConversationsAdapter(conversations, this);
         binding.conversationsRecyclerView.setAdapter(conversationsAdapter);
         database = FirebaseFirestore.getInstance();
     }
@@ -156,5 +158,12 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                 })
                 .addOnFailureListener(e -> showToast("Unable to sign out"));
+    }
+
+    @Override
+    public void onConversionClicked(User user) {
+        Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+        intent.putExtra(Constants.KEY_USER, user);
+        startActivity(intent);
     }
 }
